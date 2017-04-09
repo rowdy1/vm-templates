@@ -1,0 +1,58 @@
+{
+    "template": {
+        "name": "64-windows-7-ult-patched", 
+        "author": "Mark <none@noname.org>", 
+        "description": "64 Bit Windows Template", 
+        "created_at": {
+            "$date": "2017-04-09T10:52:00"
+        }, 
+        "updated_at": {
+            "$date": "2017-04-09T16:22:54"
+        }, 
+        "fetch": [
+            {
+                "name": "os", 
+                "url": "http://192.168.0.240/64-windows-7-ult-patched/os.img.gz", 
+                "sha256": "c6f8070f23b550009b28b73af8f3478b381e8d951dc5353b5277dad9291bb487",
+                "size": 1657015858
+            }
+        ]
+    }, 
+    "config": {
+        "ncpus": 2,
+        "bootloader": "UEFI", 
+        "memsize": 4096,
+        "minmemsize": 1024,
+        "boot_device": "os"
+    }, 
+    "devices": [
+        {
+            "type": "DISK", 
+            "name": "os", 
+            "properties": {
+                "size": 10737418240,
+                "mode": "VIRTIO", 
+                "source": "os"
+            }
+        }, 
+        {
+            "type": "NIC", 
+            "name": "nic", 
+            "properties": {
+                "mode": "BRIDGED",
+                "bridge": "default",
+                "device": "VIRTIO"
+            }
+        },
+        {
+            "type": "GRAPHICS",
+            "name": "framebuffer",
+            "properties": {
+                "resolution": "1024x768",
+                "vnc_enabled": true,
+                "vnc_port": 6666
+            }
+        }
+    ], 
+    "guest_type": "windows64"
+}
