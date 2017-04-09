@@ -52,6 +52,13 @@
                 "vnc_enabled": true,
                 "vnc_port": 6666
             }
+        },
+        {   
+            "type": "USB",
+            "name": "tablet",
+            "properties": {
+                "device": "tablet"
+            }
         }
     ], 
     "guest_type": "windows64"
