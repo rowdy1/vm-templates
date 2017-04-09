@@ -13,8 +13,8 @@
             {
                 "name": "os", 
                 "url": "http://192.168.0.240/64-windows-7-ult/os.img.gz", 
-                "sha256": "9401672987a489a974efe7dd529f8b6a444a001291773b8cec35070124730713",
-                "size": 3408051782
+                "sha256": "a395c580a22233fb392a78e5aec788d1d6b27d97dc780445b6537ccdfa47017e",
+                "size": 3356178360
             }
         ]
     }, 
@@ -30,7 +30,7 @@
             "type": "DISK", 
             "name": "os", 
             "properties": {
-                "size": 85899345920,
+                "size": 32212254720,
                 "mode": "VIRTIO", 
                 "source": "os"
             }
