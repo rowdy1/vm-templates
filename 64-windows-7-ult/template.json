@@ -2,7 +2,7 @@
     "template": {
         "name": "64-windows-7-ult", 
         "author": "Mark <none@noname.org>", 
-        "description": "64 Bit Windows Template", 
+        "description": "64 Bit Windows 7 Ultimate Template (Activated)", 
         "created_at": {
             "$date": "2017-04-09T10:52:00"
         }, 
@@ -13,8 +13,8 @@
             {
                 "name": "os", 
                 "url": "http://192.168.0.240/64-windows-7-ult/os.img.gz", 
-                "sha256": "a395c580a22233fb392a78e5aec788d1d6b27d97dc780445b6537ccdfa47017e",
-                "size": 3356178360
+                "sha256": "0b225d7a2aca64a4adcc2c555ba4b7895086430c3eab92fafef070fd7ecb72db",
+                "size": 3361414120
             }
         ]
     }, 
