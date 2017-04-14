@@ -13,8 +13,8 @@
             {
                 "name": "os", 
                 "url": "http://192.168.0.240/64-windows-10-pro/os.img.gz", 
-                "sha256": "ab5b1f5bfb4b30ef78c68324f7fc95b1cf3edf5873980f0aedf3737483e062c8",
-                "size": 5451918478
+                "sha256": "444fcc860214900dcf882648cb00f4c0d544661e66d99c5f091e6cb132758c0e",
+                "size": 5471409200
             }
         ]
     }, 
