@@ -7,14 +7,14 @@
             "$date": "2017-04-09T10:52:00"
         }, 
         "updated_at": {
-            "$date": "2017-04-09T16:22:54"
+            "$date": "2017-04-14T16:22:54"
         }, 
         "fetch": [
             {
                 "name": "os", 
                 "url": "http://192.168.0.240/64-windows-7-ult-patched/os.img.gz", 
-                "sha256": "03ef74499ce3cd9322adaece24304696cd0cbf5e71b65fc4476f042d925cda31",
-                "size": 9599601001
+                "sha256": "598366e98dfbcdaa35db19405e5692bdbe2be74584e3f782be445128b971eb42",
+                "size": 10254294580
             }
         ]
     }, 
@@ -30,7 +30,7 @@
             "type": "DISK", 
             "name": "os", 
             "properties": {
-                "size": 85899345920,
+                "size": 32212254720,
                 "mode": "VIRTIO", 
                 "source": "os"
             }
