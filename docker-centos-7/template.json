@@ -1,0 +1,75 @@
+{
+    "template": {
+        "name": "docker-centos-7", 
+        "author": "Mark <none@noname.org>", 
+        "description": "Docker Host on Centos 7 for FreeNAS", 
+        "created_at": {
+            "$date": "2017-07-08T22:45:38"
+        }, 
+        "updated_at": {
+            "$date": "2017-07-08T12:06:55"
+        }, 
+        "files": true, 
+        "fetch": [
+            {
+                "name": "os", 
+                "url": "http://192.168.0.240/docker-centos-7/os.img.gz", 
+                "sha256": "cca3de3d2a844b7d22874e2e17645b5bbc602fb0a71fedd8bf2830fba6e6df99", 
+                "size": 767762587
+            }
+        ]
+    }, 
+    "config": {
+        "docker_host": true, 
+        "ncpus": 1, 
+        "bootloader": "GRUB", 
+        "memsize": 2048,
+        "minmemsize": 1024,
+        "boot_directory": "grub", 
+        "autostart": true
+    },
+    "devices": [
+        {
+            "type": "NIC", 
+            "name": "mgmt", 
+            "properties": {
+                "mode": "MANAGEMENT"
+            }
+        }, 
+        {
+            "type": "NIC", 
+            "name": "bridge", 
+            "properties": {
+                "mode": "BRIDGED",
+                "bridge": "default"
+            }
+        }, 
+        {
+            "type": "VOLUME", 
+            "name": "docker", 
+            "properties": {
+                "type": "VT9P", 
+                "auto": true
+            }
+        }, 
+        {
+            "type": "VOLUME", 
+            "name": "mnt", 
+            "properties": {
+                "type": "VT9P", 
+                "destination": "/mnt", 
+                "auto": false
+            }
+        },
+		{
+            "type": "DISK", 
+            "name": "os", 
+            "properties": {
+                "size": 8589934592, 
+                "mode": "AHCI", 
+                "source": "os"
+            }
+        }
+    ], 
+    "guest_type": "linux64"
+}
