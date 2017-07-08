@@ -24,7 +24,7 @@
         "bootloader": "UEFI", 
         "memsize": 4096,
         "minmemsize": 1024,
-        "boot_device": "os"
+        "boot_device": "os",
         "autostart": true
     },
     "devices": [
