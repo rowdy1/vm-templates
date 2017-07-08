@@ -1,6 +1,6 @@
 {
     "template": {
-        "name": "boot2docker-v17.06.0-ce", 
+        "name": "boot2docker-v17060-ce", 
         "author": "Mark <none@noname.org>", 
         "description": "boot2docker-v17.06.0-ce Docker host for FreeNAS", 
         "created_at": {
@@ -13,14 +13,14 @@
         "fetch": [
             {
                 "name": "vmlinuz64", 
-                "url": "http://192.168.0.240/vm-templates/boot2docker-v17.06.0-ce/vmlinuz64.gz", 
+                "url": "http://192.168.0.240/boot2docker-v17060-ce/vmlinuz64.gz", 
                 "sha256": "fffacedd9fb78281f2ab0235e8b73f98abf700d7bd00204b640b1176d7992842",
                 "size": 3636985,
                 "dest": "grub"
             }, 
             {
                 "name": "initrd", 
-                "url": "http://192.168.0.240/boot2docker-v17.06.0-ce/initrd.img.gz", 
+                "url": "http://192.168.0.240/boot2docker-v17060-ce/initrd.img.gz", 
                 "sha256": "4b3c88652b9a42f3dd59a50d4ac9dc0d28c8d4e367d79395110089480e1994ae",
                 "size": 36499984,
                 "dest": "grub"
