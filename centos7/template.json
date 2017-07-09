@@ -1,0 +1,60 @@
+{
+    "template": {
+        "name": "centos7", 
+        "author": "Mark <none@noname.org>", 
+        "description": "Centos 7 for FreeNAS on btrfs", 
+        "created_at": {
+            "$date": "2017-07-10T22:45:38"
+        }, 
+        "updated_at": {
+            "$date": "2017-07-10T12:06:55"
+        }, 
+        "files": true, 
+        "fetch": [
+            {
+                "name": "os", 
+                "url": "http://192.168.0.240/centos7/os.img.gz",
+                "sha256": "14b33d468dd72788428384f499c3de071382009528a9a68346fac242c339b0bd", 
+                "size": 951095623
+            }
+        ]
+    }, 
+    "config": {
+        "ncpus": 2,
+        "bootloader": "UEFI", 
+        "memsize": 4096,
+        "minmemsize": 1024,
+        "boot_device": "os",
+        "autostart": true
+    },
+    "devices": [
+        {
+            "type": "DISK", 
+            "name": "os", 
+            "properties": {
+                "size": 32212254720,
+                "mode": "AHCI", 
+                "source": "os"
+            }
+        },
+        {
+            "type": "NIC", 
+            "name": "nic", 
+            "properties": {
+                "mode": "BRIDGED",
+                "bridge": "default",
+                "device": "VIRTIO"
+            }
+        },
+        {
+            "type": "GRAPHICS",
+            "name": "vnc",
+            "properties": {
+                "resolution": "1024x768",
+                "vnc_enabled": true,
+                "vnc_port": 7400
+            }
+        }
+    ], 
+    "guest_type": "linux64"
+}

@@ -1,0 +1,60 @@
+{
+    "template": {
+        "name": "centos7-docker-compose", 
+        "author": "Mark <none@noname.org>", 
+        "description": "Docker Host on Centos 7 for FreeNAS Compose installed on btrfs filesystem", 
+        "created_at": {
+            "$date": "2017-07-10T22:45:38"
+        }, 
+        "updated_at": {
+            "$date": "2017-07-10T12:06:55"
+        }, 
+        "files": true, 
+        "fetch": [
+            {
+                "name": "os", 
+                "url": "http://192.168.0.240/centos7-docker-compose/os.img.gz",
+                "sha256": "f528ccbe3df82970dd2de841d7ee09004376a81fcca0b72867250a742cc448cb", 
+                "size": 1300610455
+            }
+        ]
+    }, 
+    "config": {
+        "ncpus": 2,
+        "bootloader": "UEFI", 
+        "memsize": 4096,
+        "minmemsize": 1024,
+        "boot_device": "os",
+        "autostart": true
+    },
+    "devices": [
+        {
+            "type": "DISK", 
+            "name": "os", 
+            "properties": {
+                "size": 32212254720,
+                "mode": "AHCI", 
+                "source": "os"
+            }
+        },
+        {
+            "type": "NIC", 
+            "name": "nic", 
+            "properties": {
+                "mode": "BRIDGED",
+                "bridge": "default",
+                "device": "VIRTIO"
+            }
+        },
+        {
+            "type": "GRAPHICS",
+            "name": "vnc",
+            "properties": {
+                "resolution": "1024x768",
+                "vnc_enabled": true,
+                "vnc_port": 7400
+            }
+        }
+    ], 
+    "guest_type": "linux64"
+}
