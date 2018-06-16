@@ -1,0 +1,65 @@
+{
+    "template": {
+        "name": "64-windows-10-pro-patched-20180616", 
+        "author": "Mark <none@noname.org>", 
+        "description": "64 Bit Windows 10 Template (Patched)", 
+        "created_at": {
+            "$date": "2018-06-18T10:52:00"
+        }, 
+        "updated_at": {
+            "$date": "2018-06-18T16:22:54"
+        }, 
+        "fetch": [
+            {
+                "name": "os", 
+                "url": "http://192.168.0.240/64-windows-10-pro-patched-20180616/os.img.gz", 
+                "sha256": "2b6badcf38a1408b65b5f449e2abe24ebd87f15db14bc639d13bb9a7705ffb9a",
+                "size": 19088368842
+            }
+        ]
+    }, 
+    "config": {
+        "ncpus": 2,
+        "bootloader": "UEFI", 
+        "memsize": 4096,
+        "minmemsize": 1024,
+        "boot_device": "os"
+    }, 
+    "devices": [
+        {
+            "type": "DISK", 
+            "name": "os", 
+            "properties": {
+				"size": 53687091200,
+                "mode": "VIRTIO", 
+                "source": "os"
+            }
+        }, 
+        {
+            "type": "NIC", 
+            "name": "nic", 
+            "properties": {
+                "mode": "BRIDGED",
+                "bridge": "default",
+                "device": "VIRTIO"
+            }
+        },
+        {
+            "type": "GRAPHICS",
+            "name": "framebuffer",
+            "properties": {
+                "resolution": "1024x768",
+                "vnc_enabled": true,
+                "vnc_port": 6666
+            }
+        },
+        {   
+            "type": "USB",
+            "name": "tablet",
+            "properties": {
+                "device": "tablet"
+            }
+        }
+    ], 
+    "guest_type": "windows64"
+}
