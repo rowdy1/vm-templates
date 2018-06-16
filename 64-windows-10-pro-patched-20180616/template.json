@@ -13,7 +13,7 @@
             {
                 "name": "os", 
                 "url": "http://192.168.0.240/64-windows-10-pro-patched-20180616/os.img.gz", 
-                "sha256": "2b6badcf38a1408b65b5f449e2abe24ebd87f15db14bc639d13bb9a7705ffb9a",
+                "sha256": "0da3623f4889db0edc8dbb9801d6eb1a3f0e1dda383667afd8bb118639f4006d",
                 "size": 19088368842
             }
         ]
@@ -30,7 +30,7 @@
             "type": "DISK", 
             "name": "os", 
             "properties": {
-				"size": 53687091200,
+                "size": 53687091200,
                 "mode": "VIRTIO", 
                 "source": "os"
             }
